@@ -244,7 +244,7 @@ importers:
         specifier: ^0.6.11
         version: 0.6.11(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.3))(prettier@3.5.3)
       tailwindcss:
-        specifier: ^4.0.14
+        specifier: ^4.0.15
         version: 4.0.15
       tailwindcss-animate:
         specifier: ^1.0.7

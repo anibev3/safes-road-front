@@ -1,4 +1,4 @@
-import HomePage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
+import LandingPage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
 
 /**
  * The main page component that renders the HomePage component.
@@ -6,7 +6,7 @@ import HomePage from '@/app/(delete-this-and-modify-page.tsx)/HomePage';
  * @returns {JSX.Element} The rendered HomePage component.
  */
 const Page = () => {
-    return <HomePage />;
+    return <LandingPage />;
 };
 
 export default Page;

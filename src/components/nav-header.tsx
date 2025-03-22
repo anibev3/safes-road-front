@@ -32,8 +32,8 @@ export function NavHeader() {
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuLink asChild data-active={pathname === '/login'}>
-                        <Link href='/login'>Login</Link>
+                    <NavigationMenuLink asChild data-active={pathname === '/auth/login'}>
+                        <Link href='/auth/login'>Login</Link>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
             </NavigationMenuList>

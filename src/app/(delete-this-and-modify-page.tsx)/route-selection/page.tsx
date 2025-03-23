@@ -28,6 +28,8 @@ import { ArrowLeft, CheckCircle, MapPin, Navigation, Search, X } from 'lucide-re
 
 // app/(dashboard)/route-selection/page.tsx
 
+// app/(dashboard)/route-selection/page.tsx
+
 function SelectedPointDisplay({ label, color, onClear }: { label: string; color: string; onClear: () => void }) {
     return (
         <motion.div

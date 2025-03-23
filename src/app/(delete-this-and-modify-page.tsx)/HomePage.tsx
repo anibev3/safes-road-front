@@ -253,11 +253,17 @@ export default function HomePage() {
                                         <Button
                                             variant='ghost'
                                             className='flex justify-start rounded-none py-4'
-                                            onClick={() => router.push('/map')}>
+                                            onClick={() => router.push('/risks')}>
                                             <MapPin className='mr-3 h-5 w-5 text-red-600' />
-                                            Voir la carte
+                                            Liste des risques
                                         </Button>
-
+                                        <Button
+                                            variant='ghost'
+                                            className='flex justify-start rounded-none py-4'
+                                            onClick={() => router.push('/add-risk')}>
+                                            <MapPin className='mr-3 h-5 w-5 text-red-600' />
+                                            Ajouter un risque
+                                        </Button>
                                         <Button
                                             variant='ghost'
                                             className='flex justify-start rounded-none py-4'
@@ -265,7 +271,6 @@ export default function HomePage() {
                                             <Compass className='mr-3 h-5 w-5 text-green-600' />
                                             Consulter l'historique
                                         </Button>
-
                                         <Button
                                             variant='ghost'
                                             className='flex justify-start rounded-none py-4'
@@ -334,11 +339,11 @@ export default function HomePage() {
                                             </div>
                                         </div>
 
-                                        <div className='mt-6 flex justify-center'>
+                                        {/* <div className='mt-6 flex justify-center'>
                                             <Button variant='outline' onClick={() => router.push('/stats')}>
                                                 Statistiques détaillées
                                             </Button>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </Card>
                             </motion.div>
@@ -516,7 +521,7 @@ export default function HomePage() {
                             variants={itemVariants}
                             className='mt-10 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-white'>
                             <div className='grid gap-6 md:grid-cols-2'>
-                                <div>
+                                {/* <div>
                                     <h2 className='mb-2 text-2xl font-bold'>Rejoignez la communauté Safes Road</h2>
                                     <p className='mb-4 text-blue-100'>
                                         Partagez vos expériences, signalez des risques et contribuez à rendre les routes
@@ -540,7 +545,7 @@ export default function HomePage() {
                                         </Avatar>
                                     ))}
                                     <div className='ml-1 rounded-full bg-white/20 px-3 py-1 text-sm'>+15K membres</div>
-                                </div>
+                                </div> */}
                             </div>
                         </motion.div>
                     </div>

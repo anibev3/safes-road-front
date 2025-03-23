@@ -115,8 +115,8 @@ export default function DynamicHeader() {
                 activeIcon: <Home className='h-5 w-5 text-blue-600' />
             },
             {
-                href: '/map',
-                label: 'Carte',
+                href: '/risks',
+                label: 'Risques',
                 icon: <Map className='h-5 w-5' />,
                 activeIcon: <Map className='h-5 w-5 text-blue-600' />
             },
@@ -291,7 +291,7 @@ export default function DynamicHeader() {
                 </div>
 
                 {/* Desktop navigation */}
-                <nav className='hidden flex-1 items-center space-x-1 md:flex lg:space-x-2'>
+                <nav className='hidden flex-1 items-center justify-center space-x-1 md:flex lg:space-x-2'>
                     {navItems.map((item, index) => (
                         <Link
                             key={index}

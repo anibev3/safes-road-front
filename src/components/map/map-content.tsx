@@ -136,8 +136,8 @@ export default function MapScreenContent() {
         try {
             if (navigator.share) {
                 await navigator.share({
-                    title: 'Ma position sur RouteGuard',
-                    text: 'Voici mon trajet sur RouteGuard',
+                    title: 'Ma position sur Safes Road',
+                    text: 'Voici mon trajet sur Safes Road',
                     url: window.location.href
                 });
             } else {

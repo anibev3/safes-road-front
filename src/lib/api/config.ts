@@ -1,5 +1,7 @@
-// lib/config.ts
 export const config = {
+    domaine: {
+        namespace: process.env.NEXT_PUBLIC_DOMAINE_NAME || ''
+    },
     googleMaps: {
         apiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '',
         url: process.env.NEXT_PUBLIC_GOOGLE_MAPS_URL || 'https://maps.googleapis.com/maps/api/directions/json?'

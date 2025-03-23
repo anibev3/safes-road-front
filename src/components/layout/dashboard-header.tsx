@@ -191,7 +191,7 @@ export default function DynamicHeader() {
                         <SheetContent side='left' className='w-[240px] sm:w-[300px]'>
                             <div className='mb-6 flex items-center'>
                                 <Truck className='mr-2 h-6 w-6 text-blue-600' />
-                                <span className='text-xl font-bold text-blue-900 dark:text-white'>RouteGuard</span>
+                                <span className='text-xl font-bold text-blue-900 dark:text-white'>Safes Road</span>
                             </div>
 
                             {isLoading ? (
@@ -285,7 +285,7 @@ export default function DynamicHeader() {
                     <Link href='/' className='flex items-center'>
                         <Truck className='mr-2 h-6 w-6 text-blue-600' />
                         <span className='text-xl font-bold text-blue-900 md:inline-block dark:text-white'>
-                            RouteGuard
+                            Safes Road
                         </span>
                     </Link>
                 </div>

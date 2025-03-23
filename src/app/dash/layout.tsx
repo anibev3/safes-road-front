@@ -40,7 +40,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                     <header className='sticky top-0 z-30 flex h-14 items-center border-b bg-white px-4 md:h-16 dark:border-gray-800 dark:bg-gray-900'>
                         <div className='flex items-center'>
                             <Navigation className='mr-2 h-6 w-6 text-blue-600' />
-                            <span className='text-lg font-bold text-blue-900 dark:text-white'>RouteGuard</span>
+                            <span className='text-lg font-bold text-blue-900 dark:text-white'>Safes Road</span>
                         </div>
                     </header>
                 )} */}

@@ -106,7 +106,7 @@ export default function LoginPageDesktop() {
                 <div className='flex justify-center'>
                     <Link href='/' className='flex items-center'>
                         <Navigation className='h-8 w-8 text-blue-600' />
-                        <span className='ml-2 text-2xl font-bold text-blue-900'>RouteGuard</span>
+                        <span className='ml-2 text-2xl font-bold text-blue-900'>Safes Road</span>
                     </Link>
                 </div>
                 <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>

@@ -31,7 +31,7 @@ export default function Footer() {
                     <div className='md:col-span-1'>
                         <Link href='/' className='mb-4 flex items-center'>
                             <Shield className='mr-2 h-8 w-8 text-blue-400' />
-                            <span className='text-xl font-bold text-white'>RouteGuard</span>
+                            <span className='text-xl font-bold text-white'>Safes Road</span>
                         </Link>
                         <p className='mb-4 text-sm text-gray-400'>
                             Naviguez en toute sécurité sur les routes avec notre application dédiée aux chauffeurs
@@ -151,7 +151,7 @@ export default function Footer() {
             <div className='border-t border-gray-800 px-4 py-6'>
                 <div className='container mx-auto flex flex-col items-center justify-between md:flex-row'>
                     <p className='mb-4 text-center text-sm text-gray-500 md:mb-0 md:text-left'>
-                        &copy; {new Date().getFullYear()} RouteGuard. Tous droits réservés.
+                        &copy; {new Date().getFullYear()} Safes Road. Tous droits réservés.
                     </p>
                     <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500 md:justify-end'>
                         <Link href='/sitemap' className='transition-colors hover:text-white'>

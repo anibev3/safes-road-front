@@ -140,7 +140,7 @@ export default function HomePage() {
                         <div className='container mx-auto max-w-6xl'>
                             <div className='grid grid-cols-1 md:grid-cols-2'>
                                 <div className='flex flex-col justify-center'>
-                                    <Badge className='mb-3 w-fit bg-blue-500/20 text-white'>RouteGuard Pro</Badge>
+                                    <Badge className='mb-3 w-fit bg-blue-500/20 text-white'>Safes Road Pro</Badge>
                                     <h1 className='mb-2 text-4xl font-bold'>
                                         Bonjour, {user?.user?.name || 'Conducteur'}
                                     </h1>
@@ -439,7 +439,7 @@ export default function HomePage() {
                                                     Aucun trajet récent
                                                 </h3>
                                                 <p className='text-gray-500 dark:text-gray-400'>
-                                                    Commencez à utiliser RouteGuard pour enregistrer vos trajets
+                                                    Commencez à utiliser Safes Road pour enregistrer vos trajets
                                                 </p>
                                             </div>
                                         )}
@@ -517,7 +517,7 @@ export default function HomePage() {
                             className='mt-10 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-white'>
                             <div className='grid gap-6 md:grid-cols-2'>
                                 <div>
-                                    <h2 className='mb-2 text-2xl font-bold'>Rejoignez la communauté RouteGuard</h2>
+                                    <h2 className='mb-2 text-2xl font-bold'>Rejoignez la communauté Safes Road</h2>
                                     <p className='mb-4 text-blue-100'>
                                         Partagez vos expériences, signalez des risques et contribuez à rendre les routes
                                         plus sûres pour tous.

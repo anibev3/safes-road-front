@@ -98,7 +98,7 @@ export default function Landing() {
             name: 'Thomas D.',
             role: 'Chauffeur poids lourd',
             photo: '/api/placeholder/64/64',
-            quote: "RouteGuard a complètement changé ma façon de conduire. Les alertes en temps réel m'ont évité plusieurs accidents potentiels."
+            quote: "Safes Road a complètement changé ma façon de conduire. Les alertes en temps réel m'ont évité plusieurs accidents potentiels."
         },
         {
             name: 'Sophie M.',
@@ -188,7 +188,7 @@ export default function Landing() {
                 <div className='container mx-auto flex items-center justify-between px-4 py-3'>
                     <Link href='/' className='flex items-center space-x-2'>
                         <Shield className='h-8 w-8 text-blue-600' />
-                        <span className='text-xl font-bold text-blue-900'>RouteGuard</span>
+                        <span className='text-xl font-bold text-blue-900'>Safes Road</span>
                     </Link>
 
                     <nav className='hidden items-center space-x-6 md:flex'>
@@ -512,7 +512,7 @@ export default function Landing() {
                                 <div className='relative overflow-hidden rounded-lg bg-gray-900'>
                                     <Image
                                         src='/images/gps-navigato.webp'
-                                        alt='Application RouteGuard en action'
+                                        alt='Application Safes Road en action'
                                         className='h-auto w-full rounded-lg'
                                         width={300}
                                         height={250}
@@ -568,7 +568,7 @@ export default function Landing() {
                             Ce que disent nos utilisateurs
                         </h2>
                         <p className='mx-auto max-w-3xl text-lg text-gray-600 md:text-xl'>
-                            Découvrez les expériences de chauffeurs qui utilisent RouteGuard au quotidien
+                            Découvrez les expériences de chauffeurs qui utilisent Safes Road au quotidien
                         </p>
                     </div>
 

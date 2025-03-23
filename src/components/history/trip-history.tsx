@@ -421,7 +421,7 @@ export default function TripSummary({
                     <div className='space-y-4'>
                         <div className='rounded-md bg-gray-50 p-3 dark:bg-gray-800'>
                             <p className='text-sm break-all text-gray-800 dark:text-gray-200'>
-                                https://routeguard.example.com/share/{routeId}
+                                {config.domaine.namespace}/share/{routeId}
                             </p>
                         </div>
 

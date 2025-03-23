@@ -361,7 +361,7 @@ export function useMapRoute({
                         ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
                         ctx.fillRect(10, 10, 160, 30);
                         ctx.fillStyle = '#0A4D68';
-                        ctx.fillText('RouteGuard Map', 20, 30);
+                        ctx.fillText('Safes Road Map', 20, 30);
                     }
 
                     // Générer l'image finale
@@ -370,7 +370,7 @@ export function useMapRoute({
                     // Créer un lien de téléchargement
                     const link = document.createElement('a');
                     link.href = finalImage;
-                    link.download = `routeguard-map-${new Date().toISOString().slice(0, 10)}.png`;
+                    link.download = `safes-road-map-${new Date().toISOString().slice(0, 10)}.png`;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);

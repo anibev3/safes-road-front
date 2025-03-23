@@ -20,6 +20,8 @@ import { z } from 'zod';
 
 // app/(auth)/login/page-mobile.tsx
 
+// app/(auth)/login/page-mobile.tsx
+
 // Schéma de validation
 const loginSchema = z.object({
     email: z.string().email({ message: 'Adresse email invalide' }),
@@ -109,7 +111,7 @@ export default function LoginPageMobile() {
             <div className='mb-6 flex justify-center'>
                 <Link href='/' className='flex items-center'>
                     <Navigation className='h-7 w-7 text-blue-600' />
-                    <span className='ml-2 text-xl font-bold text-blue-900'>RouteGuard</span>
+                    <span className='ml-2 text-xl font-bold text-blue-900'>Safes Road</span>
                 </Link>
             </div>
 

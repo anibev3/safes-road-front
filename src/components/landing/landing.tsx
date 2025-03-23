@@ -239,7 +239,7 @@ export default function Landing() {
                                     size='lg'
                                     asChild
                                     className='w-full bg-white text-blue-900 hover:bg-blue-50 sm:w-auto'>
-                                    <Link href='/dash'>
+                                    <Link href='/auth/login'>
                                         Mon tableau de bord <ChevronRight className='ml-2 h-4 w-4' />
                                     </Link>
                                 </Button>

@@ -161,7 +161,7 @@ export default function Footer() {
                             Accessibilité
                         </Link>
                         <div className='hidden md:block'>|</div>
-                        <span>Développé avec ❤️ en France</span>
+                        <span>Développé avec ❤️ Vianney Anibe</span>
                     </div>
                 </div>
             </div>

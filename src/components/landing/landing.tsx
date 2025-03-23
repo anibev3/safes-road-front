@@ -561,7 +561,7 @@ export default function Landing() {
             </section>
 
             {/* Testimonials - Carrousel en mobile */}
-            <section className='bg-gray-50 py-16 md:py-20'>
+            {/* <section className='bg-gray-50 py-16 md:py-20'>
                 <div className='container mx-auto px-4 md:px-6'>
                     <div className='mb-12 text-center md:mb-16'>
                         <h2 className='mb-4 text-2xl font-bold text-gray-900 md:text-4xl'>
@@ -572,7 +572,6 @@ export default function Landing() {
                         </p>
                     </div>
 
-                    {/* Version mobile - Carrousel */}
                     <div
                         className='md:hidden'
                         ref={testimonialsRef}
@@ -640,7 +639,6 @@ export default function Landing() {
                         </div>
                     </div>
 
-                    {/* Version desktop - Grille */}
                     <div className='hidden grid-cols-1 gap-6 sm:grid-cols-2 md:grid md:grid-cols-3'>
                         {testimonials.map((testimonial, index) => (
                             <motion.div
@@ -666,7 +664,7 @@ export default function Landing() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section reste inchangée */}
             <section className='bg-blue-900 py-16 text-white md:py-20'>

@@ -29,38 +29,23 @@ import {
     SheetTrigger
 } from '@/registry/new-york-v4/ui/sheet';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/registry/new-york-v4/ui/tooltip';
-import { LocationPoint, RiskPoint } from '@/utils/models/route';
-import {
-    BicyclingLayer,
-    GoogleMap,
-    InfoWindow,
-    Marker,
-    TrafficLayer,
-    TransitLayer,
-    useJsApiLoader
-} from '@react-google-maps/api';
+import { BicyclingLayer, GoogleMap, InfoWindow, TrafficLayer, TransitLayer } from '@react-google-maps/api';
 
-import { AnimatePresence, motion } from 'framer-motion';
 import {
     AlertOctagon,
     AlertTriangle,
     ArrowLeft,
     Camera,
     ChevronDown,
-    ChevronUp,
-    Clock,
     Cloud,
     Crosshair,
     Info,
-    MapPin,
     Minus,
-    Navigation,
     Plus,
     Route,
     Ruler,
     Share2,
-    Shield,
-    X
+    Shield
 } from 'lucide-react';
 
 // Styles pour la carte Google Maps

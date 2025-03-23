@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 
 import DashboardLayout from '@/app/dash/layout';
 import { useAuth } from '@/hooks/use-auth';
+import { useGoogleMaps } from '@/hooks/use-google-maps';
 import { config } from '@/lib/api/config';
 import { Badge } from '@/registry/new-york-v4/ui/badge';
 import { Button } from '@/registry/new-york-v4/ui/button';
@@ -27,7 +28,7 @@ import {
 } from '@/registry/new-york-v4/ui/dropdown-menu';
 import { Input } from '@/registry/new-york-v4/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/registry/new-york-v4/ui/select';
-import { GoogleMap, InfoWindow, Libraries, Marker, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, InfoWindow, Marker } from '@react-google-maps/api';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import {
@@ -125,10 +126,7 @@ export default function RisksListPage() {
     const [selectedRisk, setSelectedRisk] = useState<RiskModel | null>(null);
 
     // Chargement de l'API Google Maps
-    const { isLoaded, loadError } = useJsApiLoader({
-        googleMapsApiKey: config.googleMaps.apiKey,
-        libraries: libraries as Libraries
-    });
+    const { isLoaded, loadError } = useGoogleMaps();
 
     // Chargement des risques
     const fetchRisks = useCallback(

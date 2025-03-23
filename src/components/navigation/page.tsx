@@ -47,7 +47,7 @@ import { Switch } from '@/registry/new-york-v4/ui/switch';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/registry/new-york-v4/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/registry/new-york-v4/ui/tooltip';
 import { LocationPoint } from '@/utils/models/route';
-import { DirectionsRenderer, GoogleMap, Marker, TrafficLayer, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, TrafficLayer } from '@react-google-maps/api';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import {

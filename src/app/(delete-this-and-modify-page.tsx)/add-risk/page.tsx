@@ -6,13 +6,14 @@ import { useRouter } from 'next/navigation';
 
 import DashboardLayout from '@/app/dash/layout';
 import { useAuth } from '@/hooks/use-auth';
+import { useGoogleMaps } from '@/hooks/use-google-maps';
 import { config } from '@/lib/api/config';
 import { Button } from '@/registry/new-york-v4/ui/button';
 import { Card } from '@/registry/new-york-v4/ui/card';
 import { DialogFooter, DialogHeader } from '@/registry/new-york-v4/ui/dialog';
 import { Input } from '@/registry/new-york-v4/ui/input';
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from '@radix-ui/react-dialog';
-import { GoogleMap, Libraries, Marker, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, Marker } from '@react-google-maps/api';
 
 import { motion } from 'framer-motion';
 import {
@@ -71,10 +72,7 @@ export default function RiskDeclarationPage() {
     const mapRef = useRef<google.maps.Map | null>(null);
 
     // Chargement de l'API Google Maps
-    const { isLoaded, loadError } = useJsApiLoader({
-        googleMapsApiKey: config.googleMaps.apiKey,
-        libraries: libraries as Libraries
-    });
+    const { isLoaded, loadError } = useGoogleMaps();
 
     const handleSelectImage = () => {
         fileInputRef.current?.click();

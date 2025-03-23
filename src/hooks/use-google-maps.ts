@@ -6,7 +6,7 @@ const libraries = ['places', 'geometry'];
 
 export function useGoogleMaps() {
     return useJsApiLoader({
-        id: 'google-map-script', // Identifiant consistant
+        id: 'google-map-script',
         googleMapsApiKey: config.googleMaps.apiKey,
         libraries: libraries as any
     });

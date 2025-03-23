@@ -64,20 +64,16 @@ export default function Footer() {
                             />
                         </button>
                         <div className={`space-y-2 ${openSections.company ? 'block' : 'hidden'} md:block`}>
-                            <Link href='/about' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 À propos
                             </Link>
-                            <Link
-                                href='/careers'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Carrières
                             </Link>
-                            <Link href='/blog' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Blog
                             </Link>
-                            <Link
-                                href='/contact'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Contactez-nous
                             </Link>
                         </div>
@@ -94,20 +90,16 @@ export default function Footer() {
                             />
                         </button>
                         <div className={`space-y-2 ${openSections.resources ? 'block' : 'hidden'} md:block`}>
-                            <Link href='/help' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Centre d'aide
                             </Link>
-                            <Link
-                                href='/guides'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Guides
                             </Link>
-                            <Link href='/faq' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 FAQ
                             </Link>
-                            <Link
-                                href='/community'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Communauté
                             </Link>
                         </div>
@@ -124,22 +116,16 @@ export default function Footer() {
                             />
                         </button>
                         <div className={`space-y-2 ${openSections.legal ? 'block' : 'hidden'} md:block`}>
-                            <Link
-                                href='/privacy'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Politique de confidentialité
                             </Link>
-                            <Link href='/terms' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Conditions d'utilisation
                             </Link>
-                            <Link
-                                href='/cookies'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Politique de cookies
                             </Link>
-                            <Link
-                                href='/licenses'
-                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                            <Link href='#' className='block py-1 text-gray-400 transition-colors hover:text-white'>
                                 Licences
                             </Link>
                         </div>
@@ -154,10 +140,10 @@ export default function Footer() {
                         &copy; {new Date().getFullYear()} Safes Road. Tous droits réservés.
                     </p>
                     <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500 md:justify-end'>
-                        <Link href='/sitemap' className='transition-colors hover:text-white'>
+                        <Link href='#' className='transition-colors hover:text-white'>
                             Plan du site
                         </Link>
-                        <Link href='/accessibility' className='transition-colors hover:text-white'>
+                        <Link href='#' className='transition-colors hover:text-white'>
                             Accessibilité
                         </Link>
                         <div className='hidden md:block'>|</div>

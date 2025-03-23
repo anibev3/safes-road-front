@@ -1,115 +1,167 @@
-// components/layout/footer.tsx
+'use client';
+
+import { useState } from 'react';
+
 import Link from 'next/link';
 
-import { Facebook, Instagram, Linkedin, Navigation, Twitter } from 'lucide-react';
+import { ChevronDown, Facebook, Instagram, Linkedin, Shield, Twitter } from 'lucide-react';
 
 export default function Footer() {
+    // État pour gérer les sections du footer dépliables sur mobile
+    const [openSections, setOpenSections] = useState({
+        company: false,
+        resources: false,
+        legal: false
+    });
+
+    // Fonction pour basculer l'état d'une section spécifique
+    const toggleSection = (section: keyof typeof openSections) => {
+        setOpenSections((prev) => ({
+            ...prev,
+            [section]: !prev[section]
+        }));
+    };
+
     return (
         <footer className='bg-gray-900 text-gray-300'>
-            <div className='container mx-auto px-4 py-12 md:px-6'>
+            {/* Section principale du footer */}
+            <div className='container mx-auto px-4 py-8 md:py-12'>
                 <div className='grid grid-cols-1 gap-8 md:grid-cols-4'>
-                    <div className='space-y-4'>
-                        <div className='flex items-center'>
-                            <Navigation className='mr-2 h-6 w-6 text-blue-400' />
+                    {/* Logo et description */}
+                    <div className='md:col-span-1'>
+                        <Link href='/' className='mb-4 flex items-center'>
+                            <Shield className='mr-2 h-8 w-8 text-blue-400' />
                             <span className='text-xl font-bold text-white'>RouteGuard</span>
-                        </div>
-                        <p className='text-sm text-gray-400'>
-                            La solution de navigation intelligente pour les chauffeurs longue distance.
+                        </Link>
+                        <p className='mb-4 text-sm text-gray-400'>
+                            Naviguez en toute sécurité sur les routes avec notre application dédiée aux chauffeurs
+                            professionnels.
                         </p>
-                        <div className='flex space-x-4'>
-                            <Link href='#' className='text-gray-400 transition-colors hover:text-white'>
+                        <div className='mt-4 flex space-x-4'>
+                            <a href='#' className='text-gray-400 transition-colors hover:text-white'>
                                 <Facebook className='h-5 w-5' />
-                            </Link>
-                            <Link href='#' className='text-gray-400 transition-colors hover:text-white'>
+                            </a>
+                            <a href='#' className='text-gray-400 transition-colors hover:text-white'>
                                 <Twitter className='h-5 w-5' />
-                            </Link>
-                            <Link href='#' className='text-gray-400 transition-colors hover:text-white'>
+                            </a>
+                            <a href='#' className='text-gray-400 transition-colors hover:text-white'>
                                 <Instagram className='h-5 w-5' />
-                            </Link>
-                            <Link href='#' className='text-gray-400 transition-colors hover:text-white'>
+                            </a>
+                            <a href='#' className='text-gray-400 transition-colors hover:text-white'>
                                 <Linkedin className='h-5 w-5' />
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Navigation Entreprise - Accordéon sur mobile */}
+                    <div className='md:col-span-1'>
+                        <button
+                            className='mb-4 flex w-full items-center justify-between md:mb-6 md:cursor-default'
+                            onClick={() => toggleSection('company')}>
+                            <h3 className='text-lg font-semibold text-white'>Entreprise</h3>
+                            <ChevronDown
+                                className={`h-5 w-5 transition-transform md:hidden ${openSections.company ? 'rotate-180' : ''}`}
+                            />
+                        </button>
+                        <div className={`space-y-2 ${openSections.company ? 'block' : 'hidden'} md:block`}>
+                            <Link href='/about' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                À propos
+                            </Link>
+                            <Link
+                                href='/careers'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Carrières
+                            </Link>
+                            <Link href='/blog' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Blog
+                            </Link>
+                            <Link
+                                href='/contact'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Contactez-nous
                             </Link>
                         </div>
                     </div>
 
-                    <div>
-                        <h3 className='mb-4 font-semibold text-white'>Liens rapides</h3>
-                        <ul className='space-y-2'>
-                            <li>
-                                <Link href='/' className='text-gray-400 transition-colors hover:text-white'>
-                                    Accueil
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href='/#features' className='text-gray-400 transition-colors hover:text-white'>
-                                    Fonctionnalités
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href='/#how-it-works'
-                                    className='text-gray-400 transition-colors hover:text-white'>
-                                    Comment ça marche
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href='/#pricing' className='text-gray-400 transition-colors hover:text-white'>
-                                    Tarifs
-                                </Link>
-                            </li>
-                        </ul>
+                    {/* Ressources - Accordéon sur mobile */}
+                    <div className='md:col-span-1'>
+                        <button
+                            className='mb-4 flex w-full items-center justify-between md:mb-6 md:cursor-default'
+                            onClick={() => toggleSection('resources')}>
+                            <h3 className='text-lg font-semibold text-white'>Ressources</h3>
+                            <ChevronDown
+                                className={`h-5 w-5 transition-transform md:hidden ${openSections.resources ? 'rotate-180' : ''}`}
+                            />
+                        </button>
+                        <div className={`space-y-2 ${openSections.resources ? 'block' : 'hidden'} md:block`}>
+                            <Link href='/help' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Centre d'aide
+                            </Link>
+                            <Link
+                                href='/guides'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Guides
+                            </Link>
+                            <Link href='/faq' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                FAQ
+                            </Link>
+                            <Link
+                                href='/community'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Communauté
+                            </Link>
+                        </div>
                     </div>
 
-                    <div>
-                        <h3 className='mb-4 font-semibold text-white'>Ressources</h3>
-                        <ul className='space-y-2'>
-                            <li>
-                                <Link href='/blog' className='text-gray-400 transition-colors hover:text-white'>
-                                    Blog
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href='/faq' className='text-gray-400 transition-colors hover:text-white'>
-                                    FAQ
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href='/support' className='text-gray-400 transition-colors hover:text-white'>
-                                    Support
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href='/tutorials' className='text-gray-400 transition-colors hover:text-white'>
-                                    Tutoriels
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className='mb-4 font-semibold text-white'>Contact</h3>
-                        <ul className='space-y-2'>
-                            <li className='text-gray-400'>Email: contact@routeguard.com</li>
-                            <li className='text-gray-400'>Téléphone: +33 1 23 45 67 89</li>
-                            <li className='text-gray-400'>Adresse: 123 Avenue de la Route, 75000 Paris</li>
-                        </ul>
+                    {/* Légal - Accordéon sur mobile */}
+                    <div className='md:col-span-1'>
+                        <button
+                            className='mb-4 flex w-full items-center justify-between md:mb-6 md:cursor-default'
+                            onClick={() => toggleSection('legal')}>
+                            <h3 className='text-lg font-semibold text-white'>Légal</h3>
+                            <ChevronDown
+                                className={`h-5 w-5 transition-transform md:hidden ${openSections.legal ? 'rotate-180' : ''}`}
+                            />
+                        </button>
+                        <div className={`space-y-2 ${openSections.legal ? 'block' : 'hidden'} md:block`}>
+                            <Link
+                                href='/privacy'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Politique de confidentialité
+                            </Link>
+                            <Link href='/terms' className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Conditions d'utilisation
+                            </Link>
+                            <Link
+                                href='/cookies'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Politique de cookies
+                            </Link>
+                            <Link
+                                href='/licenses'
+                                className='block py-1 text-gray-400 transition-colors hover:text-white'>
+                                Licences
+                            </Link>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div className='mt-12 flex flex-col items-center justify-between border-t border-gray-800 pt-8 md:flex-row'>
-                    <p className='text-sm text-gray-500'>
+            {/* Barre de droits d'auteur */}
+            <div className='border-t border-gray-800 px-4 py-6'>
+                <div className='container mx-auto flex flex-col items-center justify-between md:flex-row'>
+                    <p className='mb-4 text-center text-sm text-gray-500 md:mb-0 md:text-left'>
                         &copy; {new Date().getFullYear()} RouteGuard. Tous droits réservés.
                     </p>
-                    <div className='mt-4 flex space-x-6 md:mt-0'>
-                        <Link href='/privacy' className='text-sm text-gray-500 transition-colors hover:text-white'>
-                            Politique de confidentialité
+                    <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-500 md:justify-end'>
+                        <Link href='/sitemap' className='transition-colors hover:text-white'>
+                            Plan du site
                         </Link>
-                        <Link href='/terms' className='text-sm text-gray-500 transition-colors hover:text-white'>
-                            Conditions d'utilisation
+                        <Link href='/accessibility' className='transition-colors hover:text-white'>
+                            Accessibilité
                         </Link>
-                        <Link href='/cookies' className='text-sm text-gray-500 transition-colors hover:text-white'>
-                            Cookies
-                        </Link>
+                        <div className='hidden md:block'>|</div>
+                        <span>Développé avec ❤️ en France</span>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,8 @@ import { UserModel } from '@/utils/models/user';
 
 // hooks/use-auth.tsx
 
+// hooks/use-auth.tsx
+
 // Clés pour le stockage
 const TOKEN_KEY = 'auth_token';
 const USER_KEY = 'user_data';
@@ -153,7 +155,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
             setIsLoading(false);
 
             // Rediriger vers la page de connexion
-            router.push('/auth/login');
+            router.push('/');
         }
     };
 
